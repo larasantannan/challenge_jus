@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+
+	<h2>Selecione o tribunal e digite o número do processo</h2>
+    
+    <form method="POST" action="/contents">
+        <select name="court">
+            <option value="">Escolha um tribunal</option>
+            <option value="TJSP">TJSP</option>
+            <option value="TJMS">TJMS</option>
+        </select>
+        <input type="text" name="processNumber" placeholder="0000000-00.0000.0.00.0000">  
+        <button type="submit">Buscar</button>
+    </form>
+
+</body>
+</html>

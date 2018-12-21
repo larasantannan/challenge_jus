@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+
+    <h1>Processo n. {{ processNumber }} do {{ court }}</h1>
+    <p>Classe: {{ class_process }}</p>
+    <p>Número do processo: {{ processNumber }}</p>
+    <p>{{ area }}</p>
+    <p>Assunto: {{ subject }}</p>
+    <p>Data de distribuição: {{ distribution }}</p>
+    <p>Valor da ação: {{ value }}</p>
+    <p>Juiz: {{ judge }}</p>
+
+    <h3>Partes do processo</h3>
+    {% for link in links %}
+        <ul>
+            <li>{{ link.text }}</li>
+        </ul>
+    {% endfor %}
+
+    <h3>Movimentações</h3>
+    {% for mov in movimentacoes %}
+        <ul>
+            <li>{{ mov.text }}</li>
+        </ul>
+    {% endfor %}
+ 
+</body>
+</html>
